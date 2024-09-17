@@ -48,7 +48,10 @@ def exit_continue():
             print('Obrigado por utilizar o programa!')
             print('Desenvolvido por Felipe :^)')
             exit()
-
+        else:
+            print('Não é uma opção válida.')
+            True
+            
 print('Bem-vindo ao programa')
 print('')
 
