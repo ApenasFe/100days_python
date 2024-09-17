@@ -15,13 +15,13 @@ class MoneyMachine:
 
     def report(self):
         """Prints the current profit"""
-        print(f"Money: {self.CURRENCY}{self.profit}")
+        print(f"Lucro: {self.CURRENCY}{self.profit}")
 
     def process_coins(self):
         """Returns the total calculated from coins inserted."""
-        print("Please insert coins.")
+        print("Por favor, insira a moeda. (Quarters: 0.25 | Dimes: 0.10 | Nickles: 0.05 | Pennies: 0.01)")
         for coin in self.COIN_VALUES:
-            self.money_received += int(input(f"How many {coin}?: ")) * self.COIN_VALUES[coin]
+            self.money_received += int(input(f"Quantas moedas {coin}?: ")) * self.COIN_VALUES[coin]
         return self.money_received
 
     def make_payment(self, cost):
@@ -29,11 +29,11 @@ class MoneyMachine:
         self.process_coins()
         if self.money_received >= cost:
             change = round(self.money_received - cost, 2)
-            print(f"Here is {self.CURRENCY}{change} in change.")
+            print(f"Retornando {self.CURRENCY}{change} em troco.")
             self.profit += cost
             self.money_received = 0
             return True
         else:
-            print("Sorry that's not enough money. Money refunded.")
+            print("Perdão, não é o suficiente. Dinheiro reembolsado.")
             self.money_received = 0
             return False

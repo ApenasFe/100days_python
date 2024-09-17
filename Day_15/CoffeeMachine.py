@@ -52,7 +52,7 @@ def coffee_machine():
     def display_resources():
         for key in resources:
             value = resources[key]
-            print(f'{key}: {value} ml')
+            print(f'{key}: {value}')
 
     #Pergunta em loop qual café o usuário deseja
     def ask_user():
