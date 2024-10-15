@@ -1,4 +1,4 @@
-#Detecta, formata e armazena os dados em uma lista
+#Acessa, formata e armazena os dados em uma lista
 def formated_list():
     #Acessa o local dos dados
     with open('100days_python/Day_23/Input/Names/invited_names.txt', mode='r') as data:
