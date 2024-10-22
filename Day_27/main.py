@@ -43,7 +43,7 @@ def save_data():
     else:
         #Atualiza o arquivo JSON caso exista
         try:
-            #Carrega e atualiza o antigo arquivo JSON
+            #Carrega e atualiza o arquivo JSON
             with open('100days_python/Day_27/saved_password.json', 'r') as data_file:
                 json_data = json.load(data_file)
                 json_data.update(new_data_dict)    
